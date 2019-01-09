@@ -1,0 +1,222 @@
+/* CSS RESET 
+============ */
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 0.625em;
+}
+* {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* GENERAL STYLING
+================== */
+h2, h3, p, pre, ul, table {
+  font-size: 1.6em;
+}
+ul {
+  margin-left: 1em;
+  padding-left: 2em;
+}
+a {
+  color: #06f;
+  text-decoration: none;
+} a:hover {
+  text-decoration: underline;
+}
+p {
+  text-align: justify;
+}
+section h4 {
+  font-size: 2.4em;
+  line-height: 1;
+} section h4 a {
+  line-height: 1;
+  font-size: 1em;
+  vertical-align: top;
+  margin-left: 0.3em;
+  display: none;
+} section h4:hover a {
+  display: inline;
+  text-decoration: none;
+}
+
+/* STRUCTURE 
+============ */
+.container {
+  max-width: 100em;
+  margin-top: 3em;
+  margin-bottom: 5em;
+  -webkit-transition: width 300ms ease-in-out;
+          transition: width 300ms ease-in-out;
+}
+h2, h3, p, pre, ul, table {
+  margin-top: 1.25em; /* var(--vertical-space) */
+} .col-left pre {
+  margin-top: 0;
+}
+hr {
+  margin-top: 3.4em;
+  margin-bottom: 3.4em;
+  border: 0;
+  border-bottom: 0.1em dotted #aaa;
+}
+.col-left {
+  padding-right: 15px;
+}
+
+
+/* HOME SECTION
+=============== */
+.B, .E, .A, .M {
+  font-size: 3em;
+  letter-spacing: -0.1em;
+  -webkit-transition: letter-spacing 300ms ease-in-out;
+          transition: letter-spacing 300ms ease-in-out;
+} .B {
+  color: rgb(50, 100, 200);
+} .E {
+  color: rgb(50, 100, 170);
+} .A {
+  color: rgb(50, 100, 140);
+} .M {
+  color: rgb(50, 100, 110);
+} #home h1:hover span {
+  letter-spacing: 0.2em;
+} #home h1 a:hover {
+  text-decoration: none;
+}
+#home h2 {
+  font-size: 2.4em;
+} 
+#home h3 {
+  font-size: 1.6em;
+  word-spacing: 0.3em;
+}
+
+
+/* GRID-SYSTEM SECTION
+====================== */
+#grid-system li:first-child {
+  word-spacing: 0.7em;
+}
+
+
+/* BREAKPOINTS SECTION
+====================== */
+#breakpoints .overflow-x {
+  overflow-x: auto;
+}
+
+
+/* BOXES
+======== */
+.colored-box {
+  min-height: 2em;
+  background-color: #daeeff;
+} p.colored-box,
+  .colored-box > p {
+  margin-top: 0;
+  line-height: 1;
+  text-align: center;
+}
+.is-larger {
+  min-height: 6em;
+}
+.is-darken {
+  background-color: #75bfff;
+}
+.is-red {
+  background-color: red;
+}
+
+
+/* PRE & CODE 
+============= */
+code {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: #f7f7f9;
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0.2em;
+} .code_tag {
+  color: #2f6f9f;
+} .code_class {
+  color: #4f9fcf;
+} .code_class-name {
+  color: #d44950;
+} .code_comment {
+  color: #999;
+} .code_doctype {
+  color: #099;
+}
+pre code {
+  display: block;
+  white-space: pre-wrap;
+  overflow: scroll;
+  letter-spacing: 0;
+  padding: 0;
+}
+code > span {
+  font-family: inherit;
+}
+
+
+/* TABLES
+========= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+} thead, tr:nth-child(even) {
+  background-color: #f7f7f7;
+} table, th, td {
+  border: 0.0625em solid #c6c6c6;
+} th, td {
+  padding: 1em;
+}
+
+
+/* BUTTONS
+========== */
+.btn {
+  display: inline-block;
+  font-size: 1.6em;
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 0.0625em solid transparent;
+  -webkit-border-radius: 0.2em;
+     -moz-border-radius: 0.2em;
+          border-radius: 0.2em;
+  outline: none;
+  color: black;
+  background-color: #d1d1d1;
+  margin-top: 1.25em; /* var(--vertical-space) */
+  margin-right: 1.25em; /* var(--gutter) */
+} .btn:hover {
+  background-color: #A9A9A9;
+} .btn:last-child {
+  margin-right: 0;
+}
+
+
+/* {XS}
+======= */
+@media only screen and (max-width: 575px) {
+  html {
+    font-size: 14px;
+  }
+  h2, h3, p, pre, ul, table {
+    margin-top: 0.9375em; /* var(--vertical-space) */
+  }
+  .btn {
+    margin-right: 0;
+  }
+  .col-left {
+    padding-right: 0;
+  }
+}

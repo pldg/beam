@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="A lightweight IE8+ CSS grid framework based on inline-block."/>
+    <meta name="keywords" content="Beam, CSS, grid, framework, inline-block, ie8, lightweight, customizable, web developer, front-end, web, website, app, development, luca poldelmengo, poldelmengo"/>
+    <meta name="author" content="Luca Poldelmengo"/>
+    <title>Beam Grid</title>
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" type="text/css" href="beam.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--[if lt IE 8]>
+      <p style="font-size: 18px; color: red; margin: 30px auto; text-align: center; width: 500px;">This website works with Internet Explorer 8 or higher. Please update your current browser or download the last version of either Google Chrome or Mozilla Firefox.</p>
+    <![endif]-->
+
+    <div class="container">
+
+      <header id="home">
+        <h1><a href="#home"><span class="B">B</span><span class="E">E</span><span class="A">A</span><span class="M">M</span></a></h1>
+        <h2>A lightweight CSS grid framework</h2>
+        <h3>Responsive • 12 columns • IE8+ • Based on inline-block • Utility classes • Customizable</h3>
+        <a class="btn" href="https://github.com/poldelmengo/beam" target="_blank">View on Github</a>
+      </header>
+
+      <hr />
+
+      <section id="introduction">
+        <h4>Introduction <a href="#introduction">§</a></h4>
+        <p><i>Beam</i> is a responsive 12 columns CSS grid framework based on <a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank" rel="noopener noreferrer">inline-block</a>, it comes with a lot utility classes which make easier to create different kinds of layouts. Gutters and vertical space are customizable, you can easily delete utility classes you don't need. The lite version should be enough for most of the projects and weight only <b>5kb</b> minified. Tested in IE8+. Inspired by <a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a> and <a href="https://github.com/daneden/Toast" target="_blank">Toast</a>.</p>
+      </section><!-- END of SECTION #introduction -->
+
+      <hr />
+
+      <section id="get-started">
+        <h4>Get Started <a href="#get-started">§</a></h4>
+        <!-- CODE -->
+  <pre><code>  <span class="code_doctype">&lt;!DOCTYPE html &gt;</span>
+  <span class="code_tag">&lt;html </span><span class="code_class">lang=</span><span class="code_class-name">"en"</span><span class="code_tag">&gt;</span>
+  <span class="code_tag">&lt;head&gt;</span>
+    <span class="code_tag">&lt;meta </span><span class="code_class">charset=</span><span class="code_class-name">"utf-8"</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;meta </span><span class="code_class">http-equiv=</span><span class="code_class-name">"X-UA-Compatible"</span><span class="code_class"> content=</span><span class="code_class-name">"IE=edge"</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;meta </span><span class="code_class">name=</span><span class="code_class-name">"viewport"</span><span class="code_class"> content=</span><span class="code_class-name">"width=device-width, initial-scale=1"</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;title&gt;</span>Beam Grid<span class="code_tag">&lt;/title&gt;</span>
+    <span class="code_comment">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="html5shiv.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+    <span class="code_tag">&lt;link </span><span class="code_class">rel=</span><span class="code_class-name">"stylesheet"</span><span class="code_class"> href=</span><span class="code_class-name">"beam.css"</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;link </span><span class="code_class">rel=</span><span class="code_class-name">"stylesheet"</span><span class="code_class"> href=</span><span class="code_class-name">"style.css"</span><span class="code_tag">&gt;</span>
+    <span class="code_comment">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+  <span class="code_tag">&lt;/head&gt;</span>
+  <span class="code_tag">&lt;body&gt;</span>
+  <span class="code_tag">&lt;/body&gt;</span>
+  <span class="code_tag">&lt;/html&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+        <p>Link <code>beam.css</code> or <code>beam-lite.css</code> in your HTML document's head <b>before</b> your main stylesheet.</p>
+        <p>For customization read comments in the <code>.css</code> file.</p>
+        <p>Html5shiv polyfill add support of HTML5 elements in IE8. Download <a href="https://github.com/aFarkas/html5shiv/tree/master/dist" target="_blank">html5shiv.min.js</a> and link it <b>before</b> all your stylesheets.</p>
+        <p>Respond polyfill add support for media queries in IE8. Download <a href="https://github.com/scottjehl/Respond/tree/master/dest" target="_blank">respond.min.js</a> and link it <b>after</b> all your stylesheets. Respond.js doesn't work with pages viewed via the <code>file://</code> protocol (like when opening a local HTML file), to test responsive features in IE8 view your pages over HTTP(S).</p>
+        <p>Both Html5shiv and Respond polyfills are <b>not</b> necessary for the grid to work.</p>
+      </section><!-- END of SECTION #get-started -->
+
+      <hr />
+
+      <section id="grid-system">
+        <h4>Grid System <a href="#grid-system">§</a></h4>
+        <ul>
+          <li><code class="code_class-name">.row</code> > <code class="code_class-name">.s*</code></li>
+          <li><code class="code_class-name">.s*</code> stand for <i>span</i> and it's used to set the width of the column</li>
+          <li>Columns must be immediate children of rows</li>
+          <li>You should <b>not</b> place more than 12 columns within a single row, for example: you can have three <code><span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span></code> columns in a row</li>
+          <li>Contents should be placed within columns</li>
+          <li>To avoid layout alignment problems a simple CSS Reset is applied to all elements: <code>margin: 0;</code> <code>padding: 0;</code></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="breakpoints">
+        <h4>Breakpoints <a href="#breakpoints">§</a></h4>
+          <div class="overflow-x">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Extra Small</th>
+                  <th>Small</th>
+                  <th>Medium</th>
+                  <th>Large</th>
+                  <th>Extra Large</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Class prefix</th>
+                  <td><code class="code_class-name">.xs-*</code></td>
+                  <td><code class="code_class-name">.sm-*</code></td>
+                  <td><code class="code_class-name">.md-*</code></td>
+                  <td><code class="code_class-name">.lg-*</code></td>
+                  <td><code class="code_class-name">.xl-*</code></td>
+                </tr>
+                <tr>
+                  <th>Media queries</th>
+                  <td>&lt;576px</td>
+                  <td>≥576px <br /> &lt;767px</td>
+                  <td>≥768px <br /> &lt;991px</td>
+                  <td>≥992px <br /> &lt;1199px</td>
+                  <td>≥1200px</td>
+                </tr>
+                <tr>
+                  <th><code class="code_class-name">.container</code> width</th>
+                  <td>95%</td>
+                  <td>90%</td>
+                  <td>90%</td>
+                  <td>90%</td>
+                  <td>90%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Breakpoint-specific-class has effect on a specific range of window size, for example: <code class="code_class-name">.sm-3</code> class will <b>not</b> affect <code>{xs}</code> <code>{md}</code> <code>{lg}</code> <code>{xl}</code></p>
+          <p>You can set <code>max-width</code> for the <code class="code_class-name">.container</code> or even a fixed width if you wish, but is not necessary for the grid to work.</p>
+      </section><!-- END of SECTION #breakpoints -->
+
+      <hr />
+
+      <section id="utility-classes">
+        <h4>Utility classes <a href="#utility-classes">§</a></h4>
+        <ul>
+          <li><code class="code_class-name">.middle</code></li>
+          <li><code class="code_class-name">.bottom</code></li>
+          <li><code class="code_class-name">.center</code></li>
+          <li><code class="code_class-name">.no-gutters</code></li>
+          <li><code class="code_class-name">.collapse</code></li>
+          <li><code class="code_class-name">.delete</code></li>
+          <li><code class="code_class-name">.hide</code></li>
+          <li><code class="code_class-name">.first</code></li>
+          <li><code class="code_class-name">.last</code></li>
+          <li><code class="code_class-name">.off-*</code></li>
+        </ul>
+        <p>Utility classes are applied by default to all breakpoints. They can also be applied at specific breakpoints by adding them at the end separated by a hyphen. For example: <code class="code_class-name">.delete-lg-xl</code> will only affect <code>{lg}</code> and <code>{xl}</code> but not the other breakpoints.</p>
+        <p>You can only add one breakpoint per single <code class="code_class-name">.off-*</code> class. For example: <code class="code_class-name">.off-2-sm</code>, <code class="code_class-name">.off-2-md</code>, and so on.</p>
+        <p>If you download <code>beam-lite.css</code> only <code class="code_class-name">.delete</code> has the option for adding breakpoints. The other utility classes are still there but you can only apply them to all breakpoints.</p>
+      </section>
+
+      <hr />
+
+      <p><strong>Resize the browser to see how breakpoints affect the layout in the examples below</strong></p>
+
+      <hr />
+
+      <section id="simple-layout">
+        <h4>Simple layout <a href="#simple-layout">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s5&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s2&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s5&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s2&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>7<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>8<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s2&quot;</span><span class="code_tag">&gt;</span>9<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s6">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s6">
+                <p class="colored-box">2</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s5">
+                <p class="colored-box">3</p>
+              </div>
+              <div class="s2">
+                <p class="colored-box">4</p>
+              </div>
+              <div class="s5">
+                <p class="colored-box">5</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s2">
+                <p class="colored-box">6</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">7</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">8</p>
+              </div>
+              <div class="s2">
+                <p class="colored-box">9</p>
+              </div>
+            </div>
+            <p><code class="code_class-name">.s*</code> is applied to all breakpoints and at <code>{xs}</code> is automatically set to be the full width of its container.</p>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #simple-layout -->
+
+      <hr />
+
+      <section id="nested-rows">
+        <h4>Nested rows <a href="#nested-rows">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>1
+        <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+          <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>1a<span class="code_tag">&lt;/div&gt;</span>
+          <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>1b<span class="code_tag">&lt;/div&gt;</span>
+          <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>1c<span class="code_tag">&lt;/div&gt;</span>
+        <span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>2
+        <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+          <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>2a<span class="code_tag">&lt;/div&gt;</span>
+          <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>2b<span class="code_tag">&lt;/div&gt;</span>
+          <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>2c<span class="code_tag">&lt;/div&gt;</span>
+        <span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s6">
+                <div class="colored-box">
+                  <p>1</p>
+                  <div class="row">
+                    <div class="s4">
+                      <p class="colored-box is-darken">1a</p>
+                    </div>
+                    <div class="s4">
+                      <p class="colored-box is-darken">1b</p>
+                    </div>
+                    <div class="s4">
+                      <p class="colored-box is-darken">1c</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s6">
+                <div class="colored-box">
+                  <p>2</p>
+                  <div class="row">
+                    <div class="s4">
+                      <p class="colored-box is-darken">2a</p>
+                    </div>
+                    <div class="s4">
+                      <p class="colored-box is-darken">2b</p>
+                    </div>
+                    <div class="s4">
+                      <p class="colored-box is-darken">2c</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p> <i>Beam</i> support infinite nested rows.</p>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #nested-rows -->
+
+      <hr />
+
+      <section id="vertical-align">
+        <h4>Vertical align <a href="#vertical-align">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 middle&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 middle&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 middle&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 bottom&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 bottom-lg-xl&quot;</span><span class="code_tag">&gt;</span>7<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>8<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 bottom-lg-xl&quot;</span><span class="code_tag">&gt;</span>9<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s4 middle">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s4 middle">
+                <p class="colored-box is-larger">2</p>
+              </div>
+              <div class="s4 middle">
+                <p class="colored-box">3</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s4">
+                <p class="colored-box">4</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box is-larger">5</p>
+              </div>
+              <div class="s4 bottom">
+                <p class="colored-box">6</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s4 bottom-lg-xl">
+                <p class="colored-box">7</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box is-larger">8</p>
+              </div>
+              <div class="s4 bottom-lg-xl">
+                <p class="colored-box">9</p>
+              </div>
+            </div>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #vertical-align -->
+
+      <hr />
+
+      <section id="horizontal-center">
+        <h4>Horizontal center <a href="#horizontal-center">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s5 center&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row center&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s5 center-lg-xl&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s5 center">
+                <p class="colored-box">1</p>
+              </div>
+            </div>
+            <div class="row center">
+              <div class="s3">
+                <p class="colored-box">2</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box">3</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box">4</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s5 center-lg-xl">
+                <p class="colored-box">5</p>
+              </div>
+            </div>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #horizontal-center -->
+
+      <hr />
+
+      <section id="no-gutters">
+        <h4>Remove gutters <a href="#no-gutters">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row no-gutters&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row no-gutters-md-xl&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s2&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>7<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s2&quot;</span><span class="code_tag">&gt;</span>8<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row no-gutters">
+              <div class="s3">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box is-darken">2</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box">3</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box is-darken">4</p>
+              </div>
+            </div>
+            <div class="row no-gutters-xl-md">
+              <div class="s4">
+                <p class="colored-box">5</p>
+              </div>
+              <div class="s2">
+                <p class="colored-box is-darken">6</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">7</p>
+              </div>
+              <div class="s2">
+                <p class="colored-box is-darken">8</p>
+              </div>
+            </div>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #no-gutters -->
+
+      <hr />
+
+      <section id="collapse">
+        <h4>Collapse vertical space<a href="#collapse">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row collapse&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>7<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 collapse&quot;</span><span class="code_tag">&gt;</span>8<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>9<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row collapse-lg-xl&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s6&quot;</span><span class="code_tag">&gt;</span>10<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>11<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3&quot;</span><span class="code_tag">&gt;</span>12<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s3">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box">2</p>
+              </div>
+              <div class="s6">
+                <p class="colored-box">3</p>
+              </div>
+            </div>
+            <div class="row collapse">
+              <div class="s6">
+                <p class="colored-box is-darken">4</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box is-darken">5</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box is-darken">6</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s3">
+                <p class="colored-box">7</p>
+              </div>
+              <div class="s3 collapse">
+                <p class="colored-box">8</p>
+              </div>
+              <div class="s6">
+                <p class="colored-box">9</p>
+              </div>
+            </div>
+            <div class="row collapse-lg-xl">
+              <div class="s6">
+                <p class="colored-box is-darken">10</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box is-darken">11</p>
+              </div>
+              <div class="s3">
+                <p class="colored-box is-darken">12</p>
+              </div>
+            </div>
+            <p><code class="code_class-name">.collapse</code> affect <code>padding-top</code> only on columns at <code>{xs}</code>, in other breakpoints it affect <code>padding-top</code> on rows. You can even collapse a single column (n°8 in this example).</p>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #collapse -->
+
+      <hr />
+
+      <section id="delete">
+        <h4>Delete <a href="#delete">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 delete&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row delete-xs-sm-md&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 delete-lg&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s4">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s4 delete">
+                <p class="colored-box">2</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">3</p>
+              </div>
+            </div>
+            <div class="row delete-xs-sm-md">
+              <div class="s4">
+                <p class="colored-box">4</p>
+              </div>
+              <div class="s4 delete-lg">
+                <p class="colored-box is-darken">5</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">6</p>
+              </div>
+            </div>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #delete -->
+
+      <hr />
+
+      <section id="hide">
+        <h4>Hide <a href="#hide">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 hide&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row hide-xs-sm-md&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 hide-lg&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s4">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s4 hide">
+                <p class="colored-box is-darken">2</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box is-darken">3</p>
+              </div>
+            </div>
+            <div class="row hide-xs-sm-md">
+              <div class="s4">
+                <p class="colored-box">4</p>
+              </div>
+              <div class="s4 hide-lg">
+                <p class="colored-box is-darken">5</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">6</p>
+              </div>
+            </div>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #hide -->
+
+      <hr />
+
+      <section id="first-and-last">
+        <h4>First & Last <a href="#first-and-last">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 first&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 last&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>7<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span>8<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 first-lg-xl&quot;</span><span class="code_tag">&gt;</span>9<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s4">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">2</p>
+              </div>
+              <div class="s4 first">
+                <p class="colored-box is-darken">3</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s4 last">
+                <p class="colored-box is-darken">4</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">5</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">6</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s4">
+                <p class="colored-box">7</p>
+              </div>
+              <div class="s4">
+                <p class="colored-box">8</p>
+              </div>
+              <div class="s4 first-lg-xl">
+                <p class="colored-box is-darken">9</p>
+              </div>
+            </div>
+            <p><code class="code_class-name">.first</code> and <code class="code_class-name">.last</code> works only when columns are stacked horizontally. By default at <code>{xs}</code> are stacked vertically.</p>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #first-and-last -->
+
+      <hr />
+
+      <section id="offset">
+        <h4>Offset <a href="#offset">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 off-4&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 off-4 off-5-lg off-5-xl&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 off-4 off-5-md off-5-lg off-6-xl&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s3 off-4">
+                <p class="colored-box">1</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s3 off-4 off-5-lg off-5-xl">
+                <p class="colored-box">2</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="s3 off-4 off-5-md off-5-lg off-6-xl">
+                <p class="colored-box">3</p>
+              </div>
+            </div>
+            <p>By default <code class="code_class-name">.off-*</code> is set to zero at <code>{xs}</code> unless you specify <code class="code_class-name">.off-xs-*</code>.</p>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #offset -->
+
+      <hr />
+
+      <section id="variable-width-contents">
+        <h4>Variable width contents <a href="#variable-width-contents">§</a></h4>
+        <div class="row">
+          <div class="s6 col-left">
+  <!-- CODE -->
+  <pre><code>  <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;container&quot;</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 lg-6 xl-12&quot;</span><span class="code_tag">&gt;</span>1<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 lg-6 delete-xl&quot;</span><span class="code_tag">&gt;</span>2<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4 delete-lg-xl&quot;</span><span class="code_tag">&gt;</span>3<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;row xs-margin-fix&quot;</span><span class="code_tag">&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 xs-3 sm-4 md-6 lg-6 xl-12&quot;</span><span class="code_tag">&gt;</span>4<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 xs-3 sm-4 md-6 lg-6 delete-xl&quot;</span><span class="code_tag">&gt;</span>5<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 xs-3 sm-4 delete-md-lg-xl&quot;</span><span class="code_tag">&gt;</span>6<span class="code_tag">&lt;/div&gt;</span>
+      <span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s3 xs-3 delete-sm-md-lg-xl&quot;</span><span class="code_tag">&gt;</span>7<span class="code_tag">&lt;/div&gt;</span>
+    <span class="code_tag">&lt;/div&gt;</span>
+  <span class="code_tag">&lt;/div&gt;</span>  </code></pre>
+  <!-- END of CODE -->
+          </div><!-- END of s6 left -->
+          <div class="s6">
+            <div class="row">
+              <div class="s4 lg-6 xl-12">
+                <p class="colored-box">1</p>
+              </div>
+              <div class="s4 lg-6 delete-xl">
+                <p class="colored-box">2</p>
+              </div>
+              <div class="s4 delete-lg-xl">
+                <p class="colored-box">3</p>
+              </div>
+            </div>
+            <div class="row xs-margin-fix">
+              <div class="s3 xs-3 sm-4 md-6 lg-6 xl-12">
+                <p class="colored-box">4</p>
+              </div>
+              <div class="s3 xs-3 sm-4 md-6 lg-6 delete-xl">
+                <p class="colored-box">5</p>
+              </div>
+              <div class="s3 xs-3 sm-4 delete-md-lg-xl">
+                <p class="colored-box">6</p>
+              </div>
+              <div class="s3 xs-3 delete-sm-md-lg-xl">
+                <p class="colored-box">7</p>
+              </div>
+            </div>
+            <p>You can set the column length to be applied only at one specific breakpoint with <code class="code_class-name">.{breakpoint}-*</code> but you can <b>not</b> add more breakpoints in a single class.</p>
+            <p>When using <code class="code_class-name">.xs-*</code> add <code class="code_class-name">.xs-margin-fix</code> to its parent <code class="code_class-name">.row</code>.</p>
+            <p>The second row can also work without <code class="code_class-name">.s3</code> but it's needed for IE8 compatibility.</p>
+          </div><!-- END of s6 right -->
+        </div>
+      </section><!-- END of SECTION #variable-width-contents -->
+
+    </div><!-- END of CONTAINER-FLUID -->
+  </body>
+</html>
