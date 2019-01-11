@@ -1,4 +1,4 @@
-/* CSS RESET 
+/* CSS RESET
 ============ */
 html {
   font-size: 16px;
@@ -44,7 +44,7 @@ section h4 {
   text-decoration: none;
 }
 
-/* STRUCTURE 
+/* STRUCTURE
 ============ */
 .container {
   max-width: 100em;
@@ -91,7 +91,7 @@ hr {
 }
 #home h2 {
   font-size: 2.4em;
-} 
+}
 #home h3 {
   font-size: 1.6em;
   word-spacing: 0.3em;
@@ -134,7 +134,7 @@ hr {
 }
 
 
-/* PRE & CODE 
+/* PRE & CODE
 ============= */
 code {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

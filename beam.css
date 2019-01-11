@@ -1,11 +1,4 @@
-/*
- * Beam
- * 12 columns CSS grid framework
- * IE8+ compatible
- * Copyright 2017 Luca Poldelmengo
- * Licensed under MIT
- * Documentation: https://github.com/pldg/beam
- */
+/*! beam | MIT (c) Luca Poldelmengo | https://github.com/pldg */
 
 /*
  * The following parameters
@@ -17,8 +10,7 @@
  *
  * are customizable
  *
- * If you prefer a fixed vertical space and gutter
- * use px instead of em
+ * If you prefer a fixed vertical space and gutter use px instead of em
  */
 
 
@@ -49,7 +41,7 @@ html {
   margin-right: auto;
 }
 .row {
-  padding-top: 1.25em; /* this is var(--vertical-space) */
+  padding-top: 1.25em; /* var(--vertical-space) */
   margin-left: -1.25em; /* use var(--gutter) value */
 } .row:first-child {
   padding-top: 0;
@@ -59,7 +51,7 @@ html {
   margin-right: -0.25em;
   vertical-align: top;
   text-align: left;
-  padding-left: 1.25em; /* this is var(--gutter) */
+  padding-left: 1.25em; /* var(--gutter) */
 } .row > * > *:first-child:before { /* to avoid collapse margin problems */
   display: table;
   content: "";
@@ -76,7 +68,7 @@ html {
   .row > * {
     margin-left: 0;
     padding-left: 0;
-    padding-top: 0.9375em; /* this is var(--vertical-space-xs) */
+    padding-top: 0.9375em; /* var(--vertical-space-xs) */
   } .row:first-child > *:first-child {
     padding-top: 0;
   }
@@ -114,7 +106,7 @@ html {
   .xs-2  {width: 16.66666667%;}
   .xs-1  {width: 8.33333333%;}
   .xs-12, .xs-11, .xs-10, .xs-9, .xs-8, .xs-7, .xs-6, .xs-5, .xs-4, .xs-3, .xs-2, .xs-1 {
-    padding-left: 0.9375em; /* this is var(--gutter-xs) */
+    padding-left: 0.9375em; /* var(--gutter-xs) */
   }
   .xs-margin-fix {
     margin-left: -0.9375em; /* use var(--gutter-xs) value and apply it to .xs-* parent .row */
