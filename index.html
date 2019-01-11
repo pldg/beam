@@ -28,16 +28,23 @@
 
       <header id="home">
         <h1><a href="#home"><span class="B">B</span><span class="E">E</span><span class="A">A</span><span class="M">M</span></a></h1>
-        <h2>A lightweight CSS grid framework</h2>
-        <h3>Responsive • 12 columns • IE8+ • Based on inline-block • Utility classes • Customizable</h3>
-        <a class="btn" href="https://github.com/poldelmengo/beam" target="_blank">View on Github</a>
+        <h2>A responsive CSS grid framework based on <a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank">inline-block</a></h2>
+        <a class="btn" href="https://github.com/pldg/beam" target="_blank">View on Github</a>
       </header>
 
       <hr />
 
       <section id="introduction">
         <h4>Introduction <a href="#introduction">§</a></h4>
-        <p><i>Beam</i> is a responsive 12 columns CSS grid framework based on <a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank" rel="noopener noreferrer">inline-block</a>, it comes with a lot utility classes which make easier to create different kinds of layouts. Gutters and vertical space are customizable, you can easily delete utility classes you don't need. The lite version should be enough for most of the projects and weight only <b>5kb</b> minified. Tested in IE8+. Inspired by <a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a> and <a href="https://github.com/daneden/Toast" target="_blank">Toast</a>.</p>
+        <p>Features:</p>
+        <ul>
+          <li>12 columns</li>
+          <li>Utility classes</li>
+          <li>Customizable gutters and vertical space</li>
+          <li>Compatible with IE8+</li>
+        </ul>
+        <p>The <a href="https://github.com/pldg/beam/blob/master/beam-lite.css" target="_blank">lite version</a> (only <b>5kb</b> minified) should be enough for most of the projects.<p>
+        <p>Inspired by <a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a> and <a href="https://github.com/daneden/Toast" target="_blank">Toast</a>.</p>
       </section><!-- END of SECTION #introduction -->
 
       <hr />
@@ -55,7 +62,7 @@
     <span class="code_comment">&lt;!--[if lt IE 9]&gt;
       &lt;script src="html5shiv.min.js"&gt;&lt;/script&gt;
     &lt;![endif]--&gt;</span>
-    <span class="code_tag">&lt;link </span><span class="code_class">rel=</span><span class="code_class-name">"stylesheet"</span><span class="code_class"> href=</span><span class="code_class-name">"beam.css"</span><span class="code_tag">&gt;</span>
+    <span class="code_tag">&lt;link </span><span class="code_class">rel=</span><span class="code_class-name">"stylesheet"</span><span class="code_class"> href=</span><span class="code_class-name">"beam.min.css"</span><span class="code_tag">&gt;</span>
     <span class="code_tag">&lt;link </span><span class="code_class">rel=</span><span class="code_class-name">"stylesheet"</span><span class="code_class"> href=</span><span class="code_class-name">"style.css"</span><span class="code_tag">&gt;</span>
     <span class="code_comment">&lt;!--[if lt IE 9]&gt;
       &lt;script src="respond.min.js"&gt;&lt;/script&gt;
@@ -65,8 +72,8 @@
   <span class="code_tag">&lt;/body&gt;</span>
   <span class="code_tag">&lt;/html&gt;</span>  </code></pre>
   <!-- END of CODE -->
-        <p>Link <code>beam.css</code> or <code>beam-lite.css</code> in your HTML document's head <b>before</b> your main stylesheet.</p>
-        <p>For customization read comments in the <code>.css</code> file.</p>
+        <p>Link <a href="https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css" target="_blank"><code>beam.min.css</code></a> or <a href="https://cdn.jsdelivr.net/gh/pldg/beam/beam-lite.min.css" target="_blank"><code>beam-lite.min.css</code></a> in your HTML document's head <b>before</b> your main stylesheet.</p>
+        <p>For customization read comments inside <code>beam.css</code>.</p>
         <p>Html5shiv polyfill add support of HTML5 elements in IE8. Download <a href="https://github.com/aFarkas/html5shiv/tree/master/dist" target="_blank">html5shiv.min.js</a> and link it <b>before</b> all your stylesheets.</p>
         <p>Respond polyfill add support for media queries in IE8. Download <a href="https://github.com/scottjehl/Respond/tree/master/dest" target="_blank">respond.min.js</a> and link it <b>after</b> all your stylesheets. Respond.js doesn't work with pages viewed via the <code>file://</code> protocol (like when opening a local HTML file), to test responsive features in IE8 view your pages over HTTP(S).</p>
         <p>Both Html5shiv and Respond polyfills are <b>not</b> necessary for the grid to work.</p>
