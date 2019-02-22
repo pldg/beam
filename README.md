@@ -6,7 +6,7 @@ A responsive CSS grid framework based on [inline-block](https://www.w3schools.co
 
 - 12 columns
 - Utility classes
-- Customizable gutters and vertical space
+- Customizable
 - Compatible with IE8+
 
 ## Install
@@ -17,7 +17,7 @@ Link [*beam.min.css*](https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css) or [*b
 <link rel="stylesheet" type="text/css" href="beam.css">
 ```
 
-In [*beam-lite.css*](beam-lite.css) (only 5kb minified) utility classes are present but they can't be applied to specific breakpoint, with the exception of `.delete` (read online [documentation](https://pldg.github.io/beam/#utility-classes) for more info). Other then that, *beam-lite.css* is identical to *beam.css*. You can easily customize both *beam-lite.css* and *beam.css* (read the comments inside those files) by adding and removing the code blocks you need.
+In [*beam-lite.css*](beam-lite.css) (only 5kb minified) utility classes are present but they can't be applied to specific breakpoint, with the exception of `.delete` (read online [documentation](https://pldg.github.io/beam/#utility-classes) for more info). Besides that, *beam-lite.css* is identical to *beam.css*. You can easily customize both *beam-lite.css* and *beam.css* (read the comments inside those files) by adding and removing the code blocks you need.
 
 ## Quick Start
 
@@ -42,7 +42,7 @@ Full [documentation](https://pldg.github.io/beam/) online.
 
 ## Customization
 
-Read comments inside [`beam.css`](beam.css) for customization.
+Read comments inside [*beam.css*](./beam.css) or [*beam-lite.css*](./beam-lite.css), add and remove code blocks as needed.
 
 ## Notes
 
