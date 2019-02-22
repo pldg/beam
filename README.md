@@ -1,19 +1,23 @@
 # Beam
 
-A responsive CSS grid framework based on [inline-block](https://www.w3schools.com/css/css_inline-block.asp)
+A responsive CSS grid framework based on [inline-block](https://www.w3schools.com/css/css_inline-block.asp).
+
+## Features
 
 - 12 columns
 - Utility classes
 - Customizable gutters and vertical space
 - Compatible with IE8+
 
-The [lite version](beam-lite.css) (only <b>5kb</b> minified) should be enough for most of the projects
-
-Inspired by [Bootstrap](https://github.com/twbs/bootstrap) and [Toast](https://github.com/daneden/Toast)
-
 ## Install
 
-Link [`beam.min.css`](https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css) or [`beam-lite.min.css`](https://cdn.jsdelivr.net/gh/pldg/beam/beam-lite.min.css) in your HTML document's head before your main stylesheet, for example `<link rel="stylesheet" type="text/css" href="beam.css">`
+Link [*beam.min.css*](https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css) or [*beam-lite.min.css*](https://cdn.jsdelivr.net/gh/pldg/beam/beam-lite.min.css) in the `<head>` tag before your main stylesheet.
+
+```html
+<link rel="stylesheet" type="text/css" href="beam.css">
+```
+
+[*beam-lite.css*](beam-lite.css) (only 5kb minified) should be enough for most of the projects.
 
 ## Quick Start
 
@@ -32,10 +36,14 @@ Link [`beam.min.css`](https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css) or [`b
 </div>
 ```
 
-## Customization
-
-For customization read comments inside [`beam.css`](beam.css)
-
 ## Documentation
 
-Full documentation [here](https://pldg.github.io/beam/)
+Full [documentation](https://pldg.github.io/beam/) online.
+
+## Customization
+
+Read comments inside [`beam.css`](beam.css) for customization.
+
+## Notes
+
+Inspired by [Bootstrap](https://github.com/twbs/bootstrap) and [Toast](https://github.com/daneden/Toast).
