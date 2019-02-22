@@ -5,23 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="A lightweight IE8+ CSS grid framework based on inline-block."/>
-    <meta name="keywords" content="Beam, CSS, grid, framework, inline-block, ie8, lightweight, customizable, web developer, front-end, web, website, app, development, luca poldelmengo, poldelmengo"/>
+    <meta name="keywords" content="Beam, CSS, grid, framework, inline-block, ie8, lightweight, customizable, web developer, front-end, web, website, app, development, luca poldelmengo, poldelmengo, pldg"/>
     <meta name="author" content="Luca Poldelmengo"/>
-    <title>Beam Grid</title>
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="html5shiv.min.js"></script>
-    <![endif]-->
+    <title>Beam | CSS Grid Framework</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" type="text/css" href="beam.min.css"/>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
     <!--[if lt IE 8]>
-      <p style="font-size: 18px; color: red; margin: 30px auto; text-align: center; width: 500px;">This website works with Internet Explorer 8 or higher. Please update your current browser or download the last version of either Google Chrome or Mozilla Firefox.</p>
+      <p style="font-size: 18px; color: red; margin: 30px auto; text-align: center; width: 500px;">This website works with Internet Explorer 8 or higher. We recommend to install the last version of either Google Chrome or Mozilla Firefox.</p>
     <![endif]-->
 
     <div class="container">
@@ -31,21 +25,6 @@
         <h2>A responsive CSS grid framework based on <a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank">inline-block</a></h2>
         <a class="btn" href="https://github.com/pldg/beam" target="_blank">View on Github</a>
       </header>
-
-      <hr />
-
-      <section id="introduction">
-        <h4>Introduction <a href="#introduction">§</a></h4>
-        <p>Features:</p>
-        <ul>
-          <li>12 columns</li>
-          <li>Utility classes</li>
-          <li>Customizable gutters and vertical space</li>
-          <li>Compatible with IE8+</li>
-        </ul>
-        <p>The <a href="https://github.com/pldg/beam/blob/master/beam-lite.css" target="_blank">lite version</a> (only <b>5kb</b> minified) should be enough for most of the projects.<p>
-        <p>Inspired by <a href="https://github.com/twbs/bootstrap" target="_blank">Bootstrap</a> and <a href="https://github.com/daneden/Toast" target="_blank">Toast</a>.</p>
-      </section><!-- END of SECTION #introduction -->
 
       <hr />
 
@@ -73,7 +52,6 @@
   <span class="code_tag">&lt;/html&gt;</span>  </code></pre>
   <!-- END of CODE -->
         <p>Link <a href="https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css" target="_blank"><code>beam.min.css</code></a> or <a href="https://cdn.jsdelivr.net/gh/pldg/beam/beam-lite.min.css" target="_blank"><code>beam-lite.min.css</code></a> in your HTML document's head <b>before</b> your main stylesheet.</p>
-        <p>For customization read comments inside <code>beam.css</code>.</p>
         <p>Html5shiv polyfill add support of HTML5 elements in IE8. Download <a href="https://github.com/aFarkas/html5shiv/tree/master/dist" target="_blank">html5shiv.min.js</a> and link it <b>before</b> all your stylesheets.</p>
         <p>Respond polyfill add support for media queries in IE8. Download <a href="https://github.com/scottjehl/Respond/tree/master/dest" target="_blank">respond.min.js</a> and link it <b>after</b> all your stylesheets. Respond.js doesn't work with pages viewed via the <code>file://</code> protocol (like when opening a local HTML file), to test responsive features in IE8 view your pages over HTTP(S).</p>
         <p>Both Html5shiv and Respond polyfills are <b>not</b> necessary for the grid to work.</p>
@@ -85,11 +63,11 @@
         <h4>Grid System <a href="#grid-system">§</a></h4>
         <ul>
           <li><code class="code_class-name">.row</code> > <code class="code_class-name">.s*</code></li>
-          <li><code class="code_class-name">.s*</code> stand for <i>span</i> and it's used to set the width of the column</li>
+          <li><code class="code_class-name">.s*</code> stand for "span" and it's used to set the width of the column</li>
           <li>Columns must be immediate children of rows</li>
-          <li>You should <b>not</b> place more than 12 columns within a single row, for example: you can have three <code><span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span></code> columns in a row</li>
+          <li>You should <b>not</b> place more than 12 columns within a single row (you can have three <code><span class="code_tag">&lt;div</span> <span class="code_class">class=</span><span class="code_class-name">&quot;s4&quot;</span><span class="code_tag">&gt;</span></code> columns in a row)</li>
           <li>Contents should be placed within columns</li>
-          <li>To avoid layout alignment problems a simple CSS Reset is applied to all elements: <code>margin: 0;</code> <code>padding: 0;</code></li>
+          <li>To avoid layout alignment problems a simple CSS Reset is applied to all elements (read comments in <code>beam.css</code>)
         </ul>
       </section>
 
@@ -137,7 +115,7 @@
               </tbody>
             </table>
           </div>
-          <p>Breakpoint-specific-class has effect on a specific range of window size, for example: <code class="code_class-name">.sm-3</code> class will <b>not</b> affect <code>{xs}</code> <code>{md}</code> <code>{lg}</code> <code>{xl}</code></p>
+          <p>Breakpoint-specific-class has effect on a specific range of window size (<code class="code_class-name">.sm-3</code> class will <b>not</b> affect <code>{xs}</code> <code>{md}</code> <code>{lg}</code> <code>{xl}</code>).</p>
           <p>You can set <code>max-width</code> for the <code class="code_class-name">.container</code> or even a fixed width if you wish, but is not necessary for the grid to work.</p>
       </section><!-- END of SECTION #breakpoints -->
 
@@ -157,14 +135,14 @@
           <li><code class="code_class-name">.last</code></li>
           <li><code class="code_class-name">.off-*</code></li>
         </ul>
-        <p>Utility classes are applied by default to all breakpoints. They can also be applied at specific breakpoints by adding them at the end separated by a hyphen. For example: <code class="code_class-name">.delete-lg-xl</code> will only affect <code>{lg}</code> and <code>{xl}</code> but not the other breakpoints.</p>
-        <p>You can only add one breakpoint per single <code class="code_class-name">.off-*</code> class. For example: <code class="code_class-name">.off-2-sm</code>, <code class="code_class-name">.off-2-md</code>, and so on.</p>
-        <p>If you download <code>beam-lite.css</code> only <code class="code_class-name">.delete</code> has the option for adding breakpoints. The other utility classes are still there but you can only apply them to all breakpoints.</p>
+        <p>Utility classes are applied by default to all breakpoints. They can also be applied at specific breakpoints by adding them at the end separated by a hyphen (<code class="code_class-name">.delete-lg-xl</code> will only affect <code>{lg}</code> and <code>{xl}</code> but not the other breakpoints).</p>
+        <p>You can only add one breakpoint per single <code class="code_class-name">.off-*</code> class (<code class="code_class-name">.off-2-sm</code>, <code class="code_class-name">.off-2-md</code>, and so on).</p>
+        <p>If you use <code>beam-lite.css</code> only <code class="code_class-name">.delete</code> has the option for adding breakpoints. The other utility classes are still there but you can only apply them to all breakpoints.</p>
       </section>
 
       <hr />
 
-      <p><strong>Resize the browser to see how breakpoints affect the layout in the examples below</strong></p>
+      <p><strong>Resize the browser to see how breakpoints affect the layout in the examples below.</strong></p>
 
       <hr />
 
