@@ -1,14 +1,17 @@
-/*! beam | MIT (c) Luca Poldelmengo | https://github.com/pldg */
+/*!
+ * beam v1.0.0
+ * (c) Copyright Luca Poldelmengo
+ * https://github.com/pldg/beam
+ * Licensed under MIT
+ */
 
 /*
- * The following parameters
+ * The following parameters are customizable:
  *
  * - var(--vertical-space)
  * - var(--gutter)
  * - var(--vertical-space-xs)
  * - var(--gutter-xs)
- *
- * are customizable
  *
  * If you prefer a fixed vertical space and gutter use px instead of em
  */
@@ -42,7 +45,7 @@ html {
 }
 .row {
   padding-top: 1.25em; /* var(--vertical-space) */
-  margin-left: -1.25em; /* use var(--gutter) value */
+  margin-left: -1.25em; /* Use var(--gutter) value */
 } .row:first-child {
   padding-top: 0;
 }
@@ -52,7 +55,7 @@ html {
   vertical-align: top;
   text-align: left;
   padding-left: 1.25em; /* var(--gutter) */
-} .row > * > *:first-child:before { /* to avoid collapse margin problems */
+} .row > * > *:first-child:before { /* To avoid collapse margin problems */
   display: table;
   content: "";
   visibility: hidden;
@@ -109,7 +112,7 @@ html {
     padding-left: 0.9375em; /* var(--gutter-xs) */
   }
   .xs-margin-fix {
-    margin-left: -0.9375em; /* use var(--gutter-xs) value and apply it to .xs-* parent .row */
+    margin-left: -0.9375em; /* Use var(--gutter-xs) value and apply it to .xs-* parent .row */
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -268,7 +271,7 @@ html {
   .collapse > * {
     padding-top: 0;
   } .collapse > *:first-child {
-    padding-top: 0.9375em; /* use var(--vertical-space-xs) value */
+    padding-top: 0.9375em; /* Use var(--vertical-space-xs) value */
   }
   [class*="collapse"][class*="-xs"] > *:first-child {
     padding-top: 0;
