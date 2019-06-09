@@ -1,0 +1,30 @@
+{
+  "name": "beam-css-grid",
+  "version": "1.0.0",
+  "description": "A responsive css grid framework based on inline-block",
+  "main": "beam.min.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pldg/beam.git"
+  },
+  "keywords": [
+    "beam",
+    "css",
+    "grid",
+    "responsive",
+    "framework",
+    "inline-block",
+    "front-end",
+    "web"
+  ],
+  "author": {
+    "name": "Luca Poldelmengo",
+    "email": "luca.poldelmengo@gmail.com",
+    "url": "https://github.com/pldg"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pldg/beam/issues"
+  },
+  "homepage": "https://github.com/pldg/beam#readme"
+}
