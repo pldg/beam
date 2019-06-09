@@ -28,7 +28,7 @@ Link [*beam.min.css*](https://cdn.jsdelivr.net/gh/pldg/beam/beam.min.css) (or [*
 Install with:
 
 ```txt
-npm install --save-dev beam-css-grid
+npm install --save beam-css-grid
 ```
 
 And [import css](https://github.com/pldg/learn-webpack/tree/master/load-css) in your project using your favorite javascript bundler.
