@@ -31,7 +31,7 @@ Install with:
 npm install --save beam-css-grid
 ```
 
-And [import css](https://github.com/pldg/learn-webpack/tree/master/load-css) in your project using your favorite javascript bundler.
+And [import css](https://github.com/pldg/learn-webpack/tree/master/load-css) in your project using a javascript bundler.
 
 ## Quick Start
 
@@ -60,6 +60,6 @@ Read comments inside [*beam.css*](./beam.css), add/remove code blocks as needed.
 
 ## Notes
 
-In [*beam-lite.css*](beam-lite.css) (only 5kb minified) utility classes are present but they can't be applied to specific breakpoint, with the exception of `.delete` (read online [documentation](https://pldg.github.io/beam/#utility-classes) for more info). Besides that, *beam-lite.css* is identical to *beam.css*. You can easily customize both *beam-lite.css* and *beam.css* (read the comments inside those files) by adding and removing the code blocks you need.
+In [*beam-lite.css*](beam-lite.css) (only 4kb minified) utility classes are present but they can't be applied to specific breakpoint, with the exception of `.delete` (read online [documentation](https://pldg.github.io/beam/#utility-classes) for more info). Besides that, *beam-lite.css* is identical to *beam.css*. You can easily customize both *beam-lite.css* and *beam.css* (read the comments inside those files) by adding and removing the code blocks you need.
 
 Inspired by [Bootstrap](https://github.com/twbs/bootstrap) and [Toast](https://github.com/daneden/Toast).
